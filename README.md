@@ -1,7 +1,8 @@
 # React TypeScript template with Vite
 
 This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang.org/) boilerplate built with [Vite](https://vitejs.dev).
-It also includes [Husky](https://typicode.github.io/husk) and a pre-commit hook that runs `npm run format`.
+
+It also includes [Husky](https://typicode.github.io/husky) and a pre-commit hook that runs `npm run format`.
 
 ## What's inside?
 
