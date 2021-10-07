@@ -1,4 +1,7 @@
-const App = () => {
-  return <h1 data-testid="title">Hello world!</h1>;
+import HelloWorld from "@/components/HelloWorld";
+
+const App = (): JSX.Element => {
+  return <HelloWorld />;
 };
+
 export default App;

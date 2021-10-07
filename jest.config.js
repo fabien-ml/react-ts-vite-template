@@ -23,8 +23,10 @@ module.exports = {
   coverageDirectory: "<rootDir>/coverage/",
   coveragePathIgnorePatterns: ["<rootDir>/node_modules/", "(.*).d.ts$"],
 
-  // Return proxies object for CSS modules via identity-obj-proxy
+  // Important: order matters, specific rules should be defined first
+  // See : https://jestjs.io/fr/docs/configuration#modulenamemapper-objectstring-string--arraystring
   moduleNameMapper: {
-    "^.+\\.module\\.(css|scss)$": "identity-obj-proxy",
+    ".+\\.(css|sass|scss|png|jpg|ttf|woff|woff2|svg)$": "identity-obj-proxy", // Return proxies objects
+    "^@/(.*)$": "<rootDir>/src/$1", // To resolve typescript path aliases
   },
 };
