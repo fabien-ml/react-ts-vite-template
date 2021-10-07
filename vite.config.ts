@@ -1,4 +1,4 @@
-import { resolve } from "path";
+import path from "path";
 import { defineConfig } from "vite";
 import reactRefresh from "@vitejs/plugin-react-refresh";
 
@@ -9,6 +9,8 @@ export default defineConfig({
     jsxInject: `import React from 'react'`, // automatically import React in jsx files
   },
   resolve: {
-    alias: [{ find: "@", replacement: resolve(__dirname, "src") }],
+    alias: { 
+      "@/" : `${path.resolve(__dirname, "src")}/` 
+    },
   },
 });

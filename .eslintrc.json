@@ -1,4 +1,5 @@
 {
+  "root": true,
   "extends": [
     "eslint:recommended", // Eslint recommended configuration by eslint.
     "plugin:import/recommended", // Linting of ES2015+ import/export syntax.
