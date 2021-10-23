@@ -5,3 +5,4 @@ build/
 coverage/
 vite.config.ts
 jest.config.js
+postcss.config.js
