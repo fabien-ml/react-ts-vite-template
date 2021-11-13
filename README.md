@@ -14,6 +14,7 @@ It also includes [Husky](https://typicode.github.io/husky) and a pre-commit hook
 - [Cypress](https://www.cypress.io)
 - [ESLint](https://eslint.org)
 - [Prettier](https://prettier.io)
+- [Polyfills](https://github.com/vitejs/vite/tree/main/packages/plugin-legacy#readme)
 - [Husky](https://typicode.github.io/husky)
 
 ## Getting started
