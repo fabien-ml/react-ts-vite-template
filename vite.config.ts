@@ -10,8 +10,17 @@ export default defineConfig({
     jsxInject: `import React from 'react'`, // automatically import React in jsx files
   },
   resolve: {
-    alias: {
-      "@/": `${path.resolve(__dirname, "src")}/`,
-    },
+    alias: [
+      {
+        // for import like : @/x/y/z
+        find: /@\//,
+        replacement: path.resolve(__dirname, "src") + "/",
+      },
+      {
+        // for import like : ~x/y/z
+        find: /~(.*)/,
+        replacement: path.resolve(__dirname, "node_modules") + "/$1",
+      },
+    ],
   },
 });
