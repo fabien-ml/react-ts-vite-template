@@ -27,7 +27,8 @@
     "import/no-unresolved": "error",
     "import/no-named-as-default-member": "off",
     "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "simple-import-sort/exports": "error",
+    "@typescript-eslint/unbound-method": "off"
   },
   "env": {
     "es6": true, // enable ES2015 features.
@@ -36,7 +37,7 @@
   },
   "parser": "@typescript-eslint/parser", // Allows Eslint to understand TypeScript syntax.
   "parserOptions": {
-    "project": "tsconfig.json", // Tells Eslint where to find the root tsconfig file of your project.
+    "project": "./tsconfig.json", // Specify where to find the root tsconfig file of your project.
     "ecmaVersion": 2021, // ECMAScript version supported in the project.
     "sourceType": "module", // set to `module` because we ue ECMAScript modules.
     "ecmaFeatures": {
