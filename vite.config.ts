@@ -14,12 +14,12 @@ export default defineConfig({
       {
         // for import like : @/x/y/z
         find: /@\//,
-        replacement: path.resolve(__dirname, "src") + "/",
+        replacement: `${path.resolve(__dirname, "src")}/`,
       },
       {
         // for import like : ~x/y/z
         find: /~(.*)/,
-        replacement: path.resolve(__dirname, "node_modules") + "/$1",
+        replacement: `${path.resolve(__dirname, "node_modules")}/$1`,
       },
     ],
   },
