@@ -7,7 +7,6 @@
     "plugin:react-hooks/recommended", // Recommended react hooks linting configs.
     "plugin:jsx-a11y/recommended", // Turns on a11y rules for JSX.
     "plugin:@typescript-eslint/recommended", // Turns on rules from TypeScript-specific plugin.
-    "plugin:@typescript-eslint/recommended-requiring-type-checking", // Turns on rules from TypeScript-specific plugin.
     "plugin:prettier/recommended" // Turns off all rules that are unnecessary or might conflict with Prettier.
   ],
   "plugins": [
@@ -27,8 +26,7 @@
     "import/no-unresolved": "error",
     "import/no-named-as-default-member": "off",
     "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error",
-    "@typescript-eslint/unbound-method": "off"
+    "simple-import-sort/exports": "error"
   },
   "env": {
     "es6": true, // enable ES2015 features.
