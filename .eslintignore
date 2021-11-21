@@ -6,6 +6,5 @@ coverage/
 dist/
 public/
 
-vite.config.ts
 jest.config.js
 postcss.config.js
