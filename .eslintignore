@@ -3,6 +3,8 @@ node_modules/
 # Ignore artifacts:
 build/
 coverage/
+dist/
+public/
 
 vite.config.ts
 jest.config.js
