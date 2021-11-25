@@ -9,12 +9,12 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "test": "jest",
-    "test:watch": "jest --watch",
+    "test:unit": "jest --watch",
+    "test:unit:ci": "jest",
     "test:e2e": "cypress open",
+    "test:e2e:ci": "cypress run",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\" && git update-index --again",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet",
-    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -48,7 +48,6 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-testing-library": "^4.12.0",
-    "husky": "^7.0.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.0.6",
     "postcss": "^8.3.11",

@@ -2,8 +2,6 @@
 
 This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang.org/) boilerplate built with [Vite](https://vitejs.dev).
 
-It also includes [Husky](https://typicode.github.io/husky) and a pre-commit hook that runs `npm run format`.
-
 ## What's inside?
 
 - [ReactJS](https://reactjs.org)
@@ -15,7 +13,6 @@ It also includes [Husky](https://typicode.github.io/husky) and a pre-commit hook
 - [ESLint](https://eslint.org)
 - [Prettier](https://prettier.io)
 - [Polyfills](https://github.com/vitejs/vite/tree/main/packages/plugin-legacy#readme)
-- [Husky](https://typicode.github.io/husky)
 
 ## Getting started
 
@@ -69,15 +66,11 @@ npm run build
 
 ### Test commands
 
-- Run tests
+- Run unit tests and watch
   ```bash
-  npm run test
+  npm run test:unit
   ```
-- Watch tests
-  ```bash
-  npm run test:watch
-  ```
-- Run e2e tests with cypress
+- Run e2e tests
   ```bash
   npm run test:e2e
   ```

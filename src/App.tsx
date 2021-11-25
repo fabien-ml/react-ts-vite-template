@@ -1,7 +1,6 @@
 import HelloWorld from "@/components/HelloWorld";
 
-const App = (): JSX.Element => {
+export default function App() {
   return <HelloWorld />;
 };
 
-export default App;
