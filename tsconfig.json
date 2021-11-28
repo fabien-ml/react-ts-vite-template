@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "module": "ESNext",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext", "scripthost"],
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -22,5 +22,5 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["vite.config.*", "src/**/*"]
+  "include": ["vite.config.*", "src/**/*", "src/**/*.ts", "src/**/*.tsx"]
 }
