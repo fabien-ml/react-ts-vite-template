@@ -1,32 +1,44 @@
 module.exports = {
-  // The root of the source code, `<rootDir>` is a token Jest substitutes
+  // A list of paths to directories that Jest should use to search for files in
+  // https://jestjs.io/docs/configuration#roots-arraystring
   roots: ["<rootDir>/src/"],
 
   // The test environment that will be used for testing, jsdom for browser environment
+  // https://jestjs.io/docs/configuration#testenvironment-string
   testEnvironment: "jsdom",
 
-  // Jest transformations -- this adds support for TypeScript using ts-jest
+  // Jest transformations
+  // https://jestjs.io/docs/configuration#transform-objectstring-pathtotransformer--pathtotransformer-object
   transform: {
-    "^.+\\.tsx?$": "ts-jest",
+    "^.+\\.tsx?$": "ts-jest", // Transform TypeScript files using ts-jest
   },
 
-  // Runs special logic, such as cleaning up components
-  // when using React Testing Library and adds special
-  // extended assertions to Jest
-  setupFilesAfterEnv: ["<rootDir>/src/setupTests.ts"],
-
-  // Ignore cypress e2e test files
-  testPathIgnorePatterns: ["<rootDir>/cypress/"],
+  // A list of paths to modules that run some code to configure or set up the testing framework before each test file in the suite is executed
+  // https://jestjs.io/docs/configuration#setupfilesafterenv-array
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
 
   // Code coverage config
-  collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx}"],
+  // https://jestjs.io/docs/configuration#collectcoveragefrom-array
+  collectCoverage: true,
   coverageDirectory: "<rootDir>/coverage/",
-  coveragePathIgnorePatterns: ["<rootDir>/node_modules/", "(.*).d.ts$"],
+  collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx}"],
+  coveragePathIgnorePatterns: ["**/__mocks__/**", "(.*).d.ts$"],
 
   // Important: order matters, specific rules should be defined first
-  // See : https://jestjs.io/fr/docs/configuration#modulenamemapper-objectstring-string--arraystring
+  // https://jestjs.io/fr/docs/configuration#modulenamemapper-objectstring-string--arraystring
   moduleNameMapper: {
-    ".+\\.(css|sass|scss|png|jpg|ttf|woff|woff2|svg)$": "identity-obj-proxy", // Return proxies objects
-    "^@/(.*)$": "<rootDir>/src/$1", // To resolve typescript path aliases
+    // Handle CSS imports (with CSS modules)
+    // https://jestjs.io/docs/webpack#mocking-css-modules
+    "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
+
+    // Handle CSS imports (without CSS modules)
+    "^.+\\.(css|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+
+    // Handle static assets
+    // https://jestjs.io/docs/webpack#handling-static-assets
+    "^.+\\.(jpg|jpeg|png|gif|webp|avif|svg|ttf|woff|woff2)$": `<rootDir>/__mocks__/fileMock.js`,
+
+    // Handle TypeScript path aliases
+    "^@/(.*)$": "<rootDir>/src/$1",
   },
 };

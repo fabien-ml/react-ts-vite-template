@@ -5,6 +5,8 @@ build/
 coverage/
 dist/
 public/
+__mocks__
 
 jest.config.js
+jest.setup.js
 postcss.config.js

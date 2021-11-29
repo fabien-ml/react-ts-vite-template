@@ -40,7 +40,7 @@ This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang
    npm install
    ```
 
-5. Serve with hot reload at http://localhost:3000.
+5. Start dev server with hot reload at http://localhost:3000.
    ```bash
    npm run dev
    ```
@@ -54,14 +54,20 @@ This is a [React](https://reactjs.org) + [TypeScript](https://www.typescriptlang
 
 ### Lint commands
 
-  ```bash
-  npm run lint
-  ```
+```bash
+npm run lint
+```
 
 ### Build commands
 
 ```bash
 npm run build
+```
+
+### Run the app in production mode at http://localhost:3000.
+
+```bash
+npm run serve
 ```
 
 ### Test commands
