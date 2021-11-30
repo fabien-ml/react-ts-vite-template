@@ -14,8 +14,8 @@
     "test:e2e": "start-server-and-test serve 3000 'cypress open'",
     "test:e2e:ci": "start-server-and-test serve 3000 'cypress run'",
     "typecheck": "tsc",
-    "format": "prettier --write \"src/**/*.{ts,tsx,css}\" && git update-index --again",
-    "lint": "eslint \"src/**/*.{ts,tsx}\" --quiet"
+    "format": "prettier --write 'src/**/*.{ts,tsx,css}' && git update-index --again",
+    "lint": "eslint 'src/**/*.{ts,tsx}' --quiet"
   },
   "dependencies": {
     "react": "^17.0.2",
