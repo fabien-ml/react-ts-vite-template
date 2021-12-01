@@ -11,15 +11,16 @@ export default defineConfig({
   },
   resolve: {
     alias: [
+      // for import like : @/x/y/z
       {
-        // for import like : @/x/y/z
-        find: /@\//,
-        replacement: `${path.resolve(__dirname, "src")}/`,
+        find: "@",
+        replacement: path.resolve(__dirname, "src"),
       },
+      // fix less import : @import ~
+      // see https://github.com/vitejs/vite/issues/2185#issuecomment-784637827
       {
-        // for import like : ~x/y/z
-        find: /~(.*)/,
-        replacement: `${path.resolve(__dirname, "node_modules")}/$1`,
+        find: /^~/,
+        replacement: "",
       },
     ],
   },

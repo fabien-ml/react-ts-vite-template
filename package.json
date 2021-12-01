@@ -6,9 +6,9 @@
     "url": "https://github.com/fabien-ml"
   },
   "scripts": {
-    "dev": "vite --port 3000",
+    "dev": "vite",
     "build": "npm run typecheck && vite build",
-    "serve": "npm run build && vite preview --port 3000",
+    "serve": "npm run build && vite preview",
     "test:unit": "jest --watch",
     "test:unit:ci": "jest",
     "test:e2e": "start-server-and-test serve 3000 'cypress open'",
