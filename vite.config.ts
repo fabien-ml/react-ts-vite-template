@@ -1,6 +1,6 @@
 import legacy from "@vitejs/plugin-legacy";
 import reactRefresh from "@vitejs/plugin-react-refresh";
-import path from "path";
+import { fileURLToPath } from 'url'
 import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
@@ -10,13 +10,10 @@ export default defineConfig({
     jsxInject: `import React from 'react'`, // automatically import React in jsx files
   },
   resolve: {
-    alias: [
+    alias: {
       // for TypeScript path alias import like : @/x/y/z
-      {
-        find: "@",
-        replacement: path.resolve(__dirname, "src"),
-      },
-    ],
+      "@": fileURLToPath(new URL('./src', import.meta.url))
+    }
   },
   server: {
     proxy: {
