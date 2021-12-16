@@ -16,7 +16,7 @@ export default function HelloWorld(props: HelloWorldProps) {
       <h1 data-testid="title">{props.msg}</h1>
 
       <p>
-        Recommended IDE setup:
+        Recommended IDE setup:{" "}
         <a
           href="https://code.visualstudio.com/"
           target="_blank"
@@ -37,8 +37,8 @@ export default function HelloWorld(props: HelloWorldProps) {
           rel="noreferrer"
         >
           Vite Docs
-        </a>
-        |
+        </a>{" "}
+        |{" "}
         <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
           React Docs
         </a>
