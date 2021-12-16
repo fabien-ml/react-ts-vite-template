@@ -11,6 +11,7 @@
     "serve": "npm run build && vite preview --port 3000",
     "test:unit": "jest --watch",
     "test:unit:ci": "jest",
+    "test:unit:coverage": "jest --silent --watchAll=false --coverage",
     "test:e2e": "start-server-and-test serve http://127.0.0.1:3000/ 'cypress open'",
     "test:e2e:ci": "start-server-and-test serve http://127.0.0.1:3000/ 'cypress run'",
     "typecheck": "tsc",
