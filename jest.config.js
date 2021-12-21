@@ -10,15 +10,18 @@ module.exports = {
   // Jest transformations
   // https://jestjs.io/docs/configuration#transform-objectstring-pathtotransformer--pathtotransformer-object
   transform: {
-    "^.+\\.tsx?$": "ts-jest", // Transform TypeScript files using ts-jest
+    "^.+\\.tsx$": "ts-jest",
+    "^.+\\.ts$": "ts-jest",
   },
-
+  testRegex: "(/src/.*.(test|spec)).(jsx?|tsx?)$",
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   // A list of paths to modules that run some code to configure or set up the testing framework before each test file in the suite is executed
   // https://jestjs.io/docs/configuration#setupfilesafterenv-array
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
 
   // Code coverage config
   // https://jestjs.io/docs/configuration#collectcoveragefrom-array
+  collectCoverage: true,
   coverageDirectory: "<rootDir>/coverage/",
   collectCoverageFrom: [
     "<rootDir>/src/**/*.{ts,tsx}",
@@ -26,6 +29,7 @@ module.exports = {
     "!**/node_modules/**",
     "!**/*.d.ts",
   ],
+  coveragePathIgnorePatterns: ["(tests/.*.mock).(jsx?|tsx?)$", "(.*).d.ts$"],
 
   // Important: order matters, specific rules should be defined first
   // https://jestjs.io/fr/docs/configuration#modulenamemapper-objectstring-string--arraystring
@@ -44,4 +48,6 @@ module.exports = {
     // Handle TypeScript path aliases
     "^@/(.*)$": "<rootDir>/src/$1",
   },
+  verbose: true,
+  testTimeout: 30000,
 };
