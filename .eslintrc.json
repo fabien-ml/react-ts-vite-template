@@ -18,14 +18,24 @@
     "simple-import-sort" // Plugin for sorting imports in file.
   ],
   "rules": {
-    "react/prop-types": "off",
-    "react/react-in-jsx-scope": "off",
     "import/first": "error",
     "import/newline-after-import": "error",
     "import/no-duplicates": "error",
     "import/no-named-as-default-member": "off",
     "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "simple-import-sort/exports": "error",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-sort-props": [
+      "warn",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "ignoreCase": true,
+        "reservedFirst": true,
+        "noSortAlphabetically": true
+      }
+    ]
   },
   "env": {
     "es6": true, // enable ES2015 features.
