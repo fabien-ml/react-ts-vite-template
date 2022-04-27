@@ -36,8 +36,8 @@
     }
   },
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
@@ -50,8 +50,8 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.4.1",
     "@types/node": "^17.0.22",
-    "@types/react": "^17.0.41",
-    "@types/react-dom": "^17.0.14",
+    "@types/react": "^18.0.8",
+    "@types/react-dom": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
     "@vitejs/plugin-legacy": "^1.7.1",
