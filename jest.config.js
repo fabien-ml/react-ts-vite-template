@@ -1,11 +1,16 @@
+/** @type {import('@jest/types').Config.InitialOptions} */
 module.exports = {
+  // The test environment that will be used for testing, jsdom for browser environment
+  // https://jestjs.io/docs/configuration#testenvironment-string
+  testEnvironment: "jsdom",
+
   // A list of paths to directories that Jest should use to search for files in
   // https://jestjs.io/docs/configuration#roots-arraystring
   roots: ["<rootDir>/src/"],
 
-  // The test environment that will be used for testing, jsdom for browser environment
-  // https://jestjs.io/docs/configuration#testenvironment-string
-  testEnvironment: "jsdom",
+  // The glob patterns Jest uses to detect test files.
+  // https://jestjs.io/docs/configuration#testmatch-arraystring
+  testMatch: ["**/*.spec.ts?(x)"],
 
   // Jest transformations
   // https://jestjs.io/docs/configuration#transform-objectstring-pathtotransformer--pathtotransformer-object
